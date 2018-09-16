@@ -399,6 +399,8 @@ else
 		   -fno-delete-null-pointer-checks
 endif
 
+KBUILD_CFLAGS   += $(call cc-option, -fno-var-tracking-assignments)
+KBUILD_CFLAGS  += $(call cc-option,--param=allow-store-data-races=0)
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 
